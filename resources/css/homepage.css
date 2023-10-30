@@ -1,0 +1,84 @@
+
+.IT{
+    color: var(--sec);
+    
+    position: relative;
+    left: -10px;
+    top: -5px;
+    font-size:90px;
+    font-size:90px;
+    font-weight: bolder;
+
+}
+
+.PRESTO{
+    color: var(--yellow);
+    
+    text-shadow: var(--grey)-9px 9px 4px;
+    font-size:125px; 
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .PRESTO{
+        
+        font-size:90px;
+        text-shadow: none;   
+    }
+
+    .IT{
+        
+        
+        position: relative;
+        left: -10px;
+        top: -5px;
+        font-size:50px;
+        font-weight: bolder;
+    
+    }
+
+    .title-section{
+        display: flex;
+        text-align: center;
+        padding-top: 90px;
+        
+        
+    }
+
+    header{
+        height: 100vh;
+    }
+    /* .IT{
+        display: none;
+    }
+     */
+}
+
+.click{
+    text-shadow: var(--grey)-5px 5px 4px;
+     /* animation-name: click;
+    transition: 0.5s;
+    animation-duration: 1s;  */
+}
+
+ /* @keyframes click{
+    0%{transform: scale(0.9);}
+    25%{transform: scale(1);}
+    50%{transform: scale(0.8);}
+    75%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}  */
+
+
+.counterCus{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .mediaCounter{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

@@ -1,0 +1,192 @@
+.grid{
+    position: relative;
+    display: grid;
+    width: 70%;
+    height: 450px;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3px;
+    transition: .5s;
+}
+
+.grid .box{
+    position: relative;
+    background: var(--white); 
+    background-position: top center;
+    background-size: cover;
+    transition: .25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    filter: grayscale(0) brightness(1);
+}
+
+.grid:hover .box{
+    filter: grayscale(1);
+    z-index: 100;
+}
+
+.grid .box:hover{
+    filter: grayscale(0) brightness(1.0);
+    
+    z-index: 2500;
+}
+
+ .grid:has(.one:hover){
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
+
+     grid-template-rows: 1fr 0fr; 
+} 
+
+.grid:has(.two:hover){
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; 
+
+     grid-template-rows: 1fr 0fr; 
+} 
+
+.grid:has(.three:hover){
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr; 
+
+     grid-template-rows: 1fr 0fr; 
+} 
+
+.grid:has(.four:hover){
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr; 
+
+     grid-template-rows: 1fr 0fr; 
+} 
+
+.grid:has(.five:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr; 
+
+     grid-template-rows: 1fr 0fr; 
+} 
+
+.grid:has(.six:hover){
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; 
+
+     grid-template-rows: 0fr 1fr; 
+} 
+
+.grid:has(.seven:hover){
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr; 
+
+     grid-template-rows: 0fr 1fr; 
+} 
+
+.grid:has(.eight:hover){
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr; 
+
+     grid-template-rows: 0fr 1fr; 
+} 
+
+.grid:has(.nine:hover){
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr; 
+
+     grid-template-rows: 0fr 1fr; 
+} 
+
+.grid:has(.ten:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr; 
+
+     grid-template-rows: 0fr 1fr; 
+} 
+
+.grid .box::after{
+    content: attr(data-text);
+    position: absolute;
+    /* bottom: -100px; */
+    background-color: var(--white);
+    color: var(--main);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: .5s;
+    opacity: 0;
+    transition-delay: 0s;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+} 
+
+.grid .box:hover::after{
+    opacity: 1;
+    /* bottom: -60px; */
+    transition-delay: .25s;
+}
+
+@media screen and (max-width: 900px) {
+    .grid{
+        position: relative;
+        display: grid;
+        width: 90%;
+        height: 70vh;
+        background-color: var(--white);
+        grid-template-columns: 1fr 1fr  ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1px;
+        padding: 0px;
+    }
+
+    .grid:has(.one:hover){
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr; 
+    
+         grid-template-columns: 1fr 0fr; 
+    } 
+    
+    .grid:has(.two:hover){
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr; 
+    
+         grid-template-columns: 0fr 1fr; 
+    } 
+    
+    .grid:has(.three:hover){
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr; 
+    
+        grid-template-columns: 1fr 0fr;
+    } 
+    
+    .grid:has(.four:hover){
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr; 
+    
+         grid-template-columns: 0fr 1fr; 
+    } 
+    
+    .grid:has(.five:hover){
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr; 
+    
+         grid-template-columns: 1fr 0fr; 
+    } 
+    
+    .grid:has(.six:hover){
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr; 
+    
+         grid-template-columns: 0fr 1fr; 
+    } 
+    
+    .grid:has(.seven:hover){
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr; 
+    
+         grid-template-columns: 1fr 0fr; 
+    } 
+    
+    .grid:has(.eight:hover){
+        grid-template-rows: 1fr 1fr 1fr 2fr 1fr; 
+    
+         grid-template-columns: 0fr 1fr; 
+    } 
+    
+    .grid:has(.nine:hover){
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr; 
+    
+         grid-template-columns: 1fr 0fr; 
+    } 
+    
+    .grid:has(.ten:hover){
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr; 
+    
+         grid-template-columns: 0fr 1fr; 
+    } 
+}

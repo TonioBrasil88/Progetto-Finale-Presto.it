@@ -1,0 +1,212 @@
+.btnAccept {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid green;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position:relative;
+  overflow: hidden;
+  margin: 0 20px;
+  border-radius: 20px;
+  }
+  
+  .btnAccept:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : green;
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 0.3;
+  }
+  
+  .btnAccept:hover:before {
+  width: 100%;
+  }
+  
+  .btnReject {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid red;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position:relative;
+  overflow:hidden;
+  margin: 0 20px;
+  border-radius: 20px;
+  }
+  
+  .btnReject:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : red;
+  left: 100%;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 0.3;
+  }
+  
+  .btnReject:hover:before {
+  width: 100%;
+  left:0;
+  }
+  
+  .btnUndo {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid var(--yellow);
+  cursor: pointer;
+  letter-spacing: 2px;
+  position:relative;
+  overflow:hidden;
+  margin: 0 20px;
+  border-radius: 20px;
+  }
+  
+  .btnUndo:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background : var(--yellow);
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 0.3;
+  }
+  
+  .btnUndo:hover:before {
+  height: 100%;
+  }
+  
+  
+  .btnWorkWus{
+  text-align: center;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid var(--white);
+  cursor: pointer;
+  letter-spacing: 2px;
+  position:relative;
+  overflow:hidden;
+  margin: 0 20px;
+  }
+  
+  .btnWorkWus:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background : var(--white);
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+  }
+  
+  .btnWorkWus:hover:before {
+  left:95%;
+  }
+  
+
+  /* Bottone search e buy */
+
+  .searchbutton {
+    background-color: transparent;
+    padding: 1px 10px;
+    height: 30px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+     font-weight: bold; 
+   
+    text-transform: uppercase; 
+    color: var(--main);
+    transition: all 1000ms;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    outline: 1px solid var(--main);
+  }
+  
+  .searchbutton:hover {
+    color: var(--main);
+    transform: scale(1.1);
+     outline: 2px solid var(--yellow); 
+    box-shadow: 4px 5px 17px -4px var(--grey);
+  }
+  
+  .searchbutton::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--yellow);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .searchbutton:hover::before {
+    width: 250%;
+  }
+  
+
+  .createButton {
+    background-color: var(--sec);
+    padding: 1px 10px;
+    height: 30px;
+    width: 20%;
+    border: none;
+    border-radius: 5px;
+     font-weight: bold;  
+   
+     text-transform: uppercase;  
+    color: var(--main);
+    transition: all 1000ms;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    /* outline: 1px solid var(--main); */
+  }
+
+  @media screen and (max-width: 900px) {
+    .createButton{
+      width: fit-content;
+    }
+  }
+  
+  .createButton:hover {
+    color: var(--main);
+    transform: scale(1.1);
+     outline: 2px solid var(--yellow); 
+    box-shadow: 4px 5px 17px -4px var(--grey);
+  }
+  
+  .createButton::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--yellow);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .createButton:hover::before {
+    width: 250%;
+  }
+  
